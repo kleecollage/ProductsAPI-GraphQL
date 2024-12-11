@@ -5,6 +5,7 @@ services:
       - "3000-3000"
     links:
       - db
+    restart: always
   db:
     image: mysql:8.0.34
     ports:

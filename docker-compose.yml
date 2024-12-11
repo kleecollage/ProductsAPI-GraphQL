@@ -1,0 +1,17 @@
+services:
+
+  db:
+    image: mysql:8.0.34
+    ports:
+      - "3306:3306"
+    restart: always
+    volumes:
+      - mysql_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_USER: kleec
+      MYSQL_PASSWORD: kleec
+      MYSQL_DATABASE: products-gql
+
+volumes:
+  mysql_data:

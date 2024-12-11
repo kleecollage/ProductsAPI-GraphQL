@@ -1,5 +1,10 @@
 services:
-
+  api_products:
+    build: .
+    ports:
+      - "3000-3000"
+    links:
+      - db
   db:
     image: mysql:8.0.34
     ports:
